@@ -29,7 +29,7 @@ public class PessoaJuridicaDAO {
             if (resultado.next()) {
                 pessoaJuridica = new PessoaJuridica(
                         resultado.getString("cnpj"),
-                        resultado.getInt("id"),
+                        resultado.getInt("pessoaID"),
                         resultado.getString("nome"),
                         resultado.getString("logradouro"),
                         resultado.getString("cidade"),
@@ -61,7 +61,7 @@ public class PessoaJuridicaDAO {
             while (resultado.next()) {
                 pessoasJuridicas.add(new PessoaJuridica(
                         resultado.getString("cnpj"),
-                        resultado.getInt("id"),
+                        resultado.getInt("pessoaID"),
                         resultado.getString("nome"),
                         resultado.getString("logradouro"),
                         resultado.getString("cidade"),

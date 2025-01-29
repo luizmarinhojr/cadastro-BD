@@ -29,7 +29,7 @@ public class PessoaFisicaDAO {
             if (resultado.next()) {
                 pessoaFisica = new PessoaFisica(
                     resultado.getString("cpf"),
-                    resultado.getInt("id"),
+                    resultado.getInt("pessoaID"),
                     resultado.getString("nome"),
                     resultado.getString("logradouro"),
                     resultado.getString("cidade"),
@@ -61,7 +61,7 @@ public class PessoaFisicaDAO {
             while (resultado.next()) {
                 pessoasFisicas.add(new PessoaFisica(
                         resultado.getString("cpf"),
-                        resultado.getInt("id"),
+                        resultado.getInt("pessoaID"),
                         resultado.getString("nome"),
                         resultado.getString("logradouro"),
                         resultado.getString("cidade"),
@@ -71,7 +71,7 @@ public class PessoaFisicaDAO {
                 ));
             }
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            System.out.println("ERRO" + e.getMessage());
         } finally {
             conector.close(conexao, declaracao, resultado);
         }
