@@ -110,6 +110,7 @@ public class PessoaFisicaDAO {
             declaracaoPessoaFisica.setString(2, pessoaFisica.getCpf());
             declaracaoPessoaFisica.executeUpdate();
 
+            System.out.println("\nPessoa física adicionada com sucesso!");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         } finally {
@@ -148,6 +149,8 @@ public class PessoaFisicaDAO {
             declaracaoPessoaFisica.setInt(2, pessoaFisica.getId());
             declaracaoPessoaFisica.executeUpdate();
 
+            System.out.println("\nPessoa física alterada com sucesso!");
+
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         } finally {
@@ -177,6 +180,8 @@ public class PessoaFisicaDAO {
             // EXCLUIR UMA PESSOA DA TABELA
             declaracaoPessoa.setInt(1, pessoaFisica.getId());
             declaracaoPessoa.executeUpdate();
+
+            System.out.println("\nPessoa física excluída com sucesso!");
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());

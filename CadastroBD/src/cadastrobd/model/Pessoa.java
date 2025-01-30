@@ -65,5 +65,9 @@ public class Pessoa {
 
     public String getEmail() {
         return email;
-    } 
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }

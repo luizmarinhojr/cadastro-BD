@@ -11,6 +11,12 @@ public class PessoaFisica extends Pessoa {
         this.cpf = cpf;
     }
 
+    public PessoaFisica(Pessoa pessoa, String cpf) {
+        super(pessoa.getId(), pessoa.getNome(), pessoa.getLogradouro(), pessoa.getCidade(),
+                pessoa.getEstado(), pessoa.getTelefone(), pessoa.getEmail());
+        this.cpf = cpf;
+    }
+
     @Override
     public String exibir() {
         return String.format(

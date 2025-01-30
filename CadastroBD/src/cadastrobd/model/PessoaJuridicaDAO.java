@@ -110,6 +110,8 @@ public class PessoaJuridicaDAO {
             declaracaoPessoaJuridica.setString(2, pessoaJuridica.getCnpj());
             declaracaoPessoaJuridica.executeUpdate();
 
+            System.out.println("\nPessoa jurídica adicionada com sucesso!");
+
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         } finally {
@@ -148,6 +150,8 @@ public class PessoaJuridicaDAO {
             declaracaoPessoaJuridica.setInt(2, pessoaJuridica.getId());
             declaracaoPessoaJuridica.executeUpdate();
 
+            System.out.println("\nPessoa jurídica alterada com sucesso!");
+
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         } finally {
@@ -177,6 +181,8 @@ public class PessoaJuridicaDAO {
             // EXCLUIR UMA PESSOA DA TABELA
             declaracaoPessoa.setInt(1, pessoaJuridica.getId());
             declaracaoPessoa.executeUpdate();
+
+            System.out.println("\nPessoa jurídica excluida com sucesso!");
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());
