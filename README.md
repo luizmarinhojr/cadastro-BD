@@ -3,7 +3,7 @@
 - Essa missão prática foi dividida em dois procedimentos. 
 - O 1ª Procedimento envolve o Mapeamento Objeto-Relacional e DAO, enquanto que o 2ª Procedimento envolve Alimentar a Base. O desenvolvimento dos procedimentos estão organizados por branch. 
 - O 1ª Procedimento está na branch PrimeiroProcedimento, e o 2ª Procedimento está na branch SegundoProcedimento.
-- Essa branch **main** se refere aos dois procedimentos.
+- Essa branch **SegundoProcedimento** se refere aos dois procedimentos.
 
 ## Objetivos da prática
 1. Implementar persistência com base no middleware JDBC.
