@@ -15,7 +15,8 @@ public class PessoaJuridicaDAO {
     private static final ConectorBD conector = new ConectorBD();
 
     public PessoaJuridica getPessoa(int id) {
-        String sqlGetPessoa = "SELECT * FROM Pessoas p JOIN PessoasJuridicas pf ON p.pessoaID = pf.pessoaID WHERE p.pessoaID = ?";
+        String sqlGetPessoa = 
+                "SELECT * FROM Pessoas p JOIN PessoasJuridicas pf ON p.pessoaID = pf.pessoaID WHERE p.pessoaID = ?";
         PessoaJuridica pessoaJuridica = null;
         Connection conexao = null;
         PreparedStatement declaracao = null;
@@ -122,7 +123,8 @@ public class PessoaJuridicaDAO {
     }
 
     public void alterar(PessoaJuridica pessoaJuridica) {
-        String sqlPessoa = "UPDATE Pessoas SET nome = ?, logradouro = ?, cidade = ?, estado = ?, telefone = ?, email = ? " +
+        String sqlPessoa = 
+                "UPDATE Pessoas SET nome = ?, logradouro = ?, cidade = ?, estado = ?, telefone = ?, email = ? " +
                 "WHERE pessoaID = ?";
         String sqlPessoaJuridica = "UPDATE PessoasJuridicas SET cnpj = ? WHERE pessoaID = ?";
 

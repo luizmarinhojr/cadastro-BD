@@ -15,7 +15,8 @@ public class PessoaFisicaDAO {
     private static final ConectorBD conector = new ConectorBD();
 
     public PessoaFisica getPessoa(int id) {
-        String sqlGetPessoa = "SELECT * FROM Pessoas p JOIN PessoasFisicas pf ON p.pessoaID = pf.pessoaID WHERE p.pessoaID = ?";
+        String sqlGetPessoa = 
+                "SELECT * FROM Pessoas p JOIN PessoasFisicas pf ON p.pessoaID = pf.pessoaID WHERE p.pessoaID = ?";
         PessoaFisica pessoaFisica = null;
         Connection conexao = null;
         PreparedStatement declaracao = null;
@@ -80,7 +81,8 @@ public class PessoaFisicaDAO {
     }
 
     public void incluir(PessoaFisica pessoaFisica) {
-        String sqlPessoa = "INSERT INTO Pessoas (pessoaID, nome, logradouro, cidade, estado, telefone, email) " +
+        String sqlPessoa = 
+                "INSERT INTO Pessoas (pessoaID, nome, logradouro, cidade, estado, telefone, email) " +
                 "VALUES (?, ?, ?, ?, ?, ?, ?)";
         String sqlPessoaFisica = "INSERT INTO PessoasFisicas (pessoaID, cpf) " +
                 "VALUES (?, ?)";
@@ -121,7 +123,8 @@ public class PessoaFisicaDAO {
     }
 
     public void alterar(PessoaFisica pessoaFisica) {
-        String sqlPessoa = "UPDATE Pessoas SET nome = ?, logradouro = ?, cidade = ?, estado = ?, telefone = ?, email = ? " +
+        String sqlPessoa = 
+                "UPDATE Pessoas SET nome = ?, logradouro = ?, cidade = ?, estado = ?, telefone = ?, email = ? " +
                 "WHERE pessoaID = ?";
         String sqlPessoaFisica = "UPDATE PessoasFisicas SET cpf = ? WHERE pessoaID = ?";
 

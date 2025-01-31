@@ -18,7 +18,9 @@ public class SequenceManager {
 
         try {
             conexao = conector.getConnection();
-            declaracao = conector.getPrepared(conexao, String.format("SELECT NEXT VALUE FOR %s AS proximo_id;", nomeSequencia));
+            declaracao = conector.getPrepared(conexao, String.format(
+                    "SELECT NEXT VALUE FOR %s AS proximo_id;", nomeSequencia)
+            );
             resultado = conector.getSelect(declaracao);
             if (resultado.next()) {
                 valor = resultado.getInt("proximo_id");

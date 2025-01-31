@@ -5,7 +5,8 @@ import java.sql.*;
 
 public class ConectorBD {
 
-    private static final String URL = "jdbc:sqlserver://172.17.0.2:1433;databaseName=Loja;encrypt=true;trustServerCertificate=true;";
+    private static final String URL = 
+            "jdbc:sqlserver://172.17.0.2:1433;databaseName=Loja;encrypt=true;trustServerCertificate=true;";
     private static final String USER = "loja";
     private static final String PASSWORD = "loja";
 

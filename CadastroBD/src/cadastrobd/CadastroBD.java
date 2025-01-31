@@ -31,13 +31,13 @@ public class CadastroBD {
         do {
             boolean escolhaValida = false;
             System.out.println(opcoes);
-            System.out.print("Digite o número da opção -> ");
             do {
                 try {
+                    System.out.print("Digite o número da opção -> ");
                     escolhaMenu = Integer.parseInt(LEITOR.nextLine());
                     escolhaValida = true;
                 } catch(NumberFormatException ex) {
-                    System.out.println("\nEntrada inválida, tente novamente");
+                    System.out.println("\nEntrada inválida, tente novamente\n");
                 }
             } while (!escolhaValida);
 
