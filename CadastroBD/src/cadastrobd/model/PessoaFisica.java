@@ -4,6 +4,8 @@ package cadastrobd.model;
 public class PessoaFisica extends Pessoa {
 
     private String cpf;
+    
+    public PessoaFisica() {}
 
     public PessoaFisica(String cpf, int id, String nome, String logradouro, 
             String cidade, String estado, String telefone, String email) {
